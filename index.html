@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Commnent</h1>
+        <p>Đánh giá của thực khách</p>
+        <div><span id="comment">0</span> Bình luận</div>
+        <div class="comments">
+            <div class="parents">
+                <img src="img/guest.png">
+                <div>
+                    <h1> Thực khách</h1>
+                    <div> <span class="date">00:00:00 1/12/2023</span> </div>
+                    <h2>Món: Canh Khổ Qua</h2>
+                    <p>Đánh giá: 3 sao</p>
+                    <p>Bình luận: Tạm</p>
+                </div>
+            </div>
+            <div class="parents">
+                <img src="img/user.png">
+                <div>
+                    <h1> Khang &nbsp;&nbsp;</h1>
+                    <div> <span class="date">23:59:59 24/12/2023</span> </div>
+                    <h2>Món: Trà sữa</h2>
+                    <p>Đánh giá: 5 sao</p>
+                    <p>Bình luận: Nice :))</p>
+                </div>
+            </div>  
+        </div>
+        <div class="head">
+            <h1>Viết Bình Luận</h1>
+        </div>
+        <div class="commentbox">
+            <img src="img/guest.png">
+            <div class="content">
+                <h3>Bình luận với tên: </h3>
+                <input type="text" value="Thực khách" class="user">
+
+                <div class="commentinput">
+                    <div class="form_group">
+                        <p>Chọn món ăn bạn muốn bình luận:</p>
+                        <select id="item" class="form_control">
+                            <option value="Cafe đá hay Cafe đen">Cafe đá hay Cafe đen</option>
+                            <option value="Trà sữa">Trà sữa</option>
+                            <option value="Trà hay Chè">Trà hay Chè</option>
+                            <option value="Bánh Mì">Bánh Mì</option>
+                            <option value="Phở">Phở</option>
+                            <option value="Bún Bò Huế">Bún Bò Huế</option>
+                            <option value="Bánh Xèo">Bánh Xèo</option>
+                            <option value="Canh Khổ Qua">Canh Khổ Qua</option>
+                            <option value="Thịt Kho Trứng">Thịt Kho Trứng</option>
+                        </select>
+                    </div>
+                    <div class="card">
+                        <p class="heading">Đánh giá :</p>
+                        <div class="stars">
+                            <i class="bx bx-star">
+                                <div></div>
+                                <div></div>
+                            </i>
+                            <i class="bx bx-star">
+                                <div></div>
+                                <div></div>
+                            </i>
+                            <i class="bx bx-star">
+                                <div></div>
+                                <div></div>
+                            </i>
+                            <i class="bx bx-star">
+                                <div></div>
+                                <div></div>
+                            </i>
+                            <i class="bx bx-star">
+                                <div></div>
+                                <div></div>
+                            </i>
+                        </div>
+                        <p class="rating"><span>0</span> sao</p>
+                    </div>
+                    <input type="text" placeholder="Ý kiến của bạn" class="usercomment">
+                    <div class="buttons">
+                        <button type="submit" disabled id="publish">Gửi Bình Luận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.onload = function() {
+            date1 = new date(2023 - 12 - 25);
+            date2 = new date(2023 - 12 - 31);
+            comments.innerHTML +=
+                `<div class="parents">
+        <img src="img/guest.png">
+        <div>
+            <h1> Thực khách &nbsp;&nbsp;</h1>
+            <div> <span class="date">${date1} </span> </div>
+            <h2>Món: Canh Khổ Qua &nbsp;&nbsp;<h2>
+            <p>Đánh giá: 3 sao</p>
+            <p>Bình luận: Hơi đắng</p>
+        </div>
+    </div>`;
+            comments.innerHTML +=
+                `<div class="parents">
+        <img src="img/user.png">
+        <div>
+            <h1> Khang &nbsp;&nbsp;</h1>
+            <div> <span class="date">${date2} </span> </div>
+            <h2>Món: Trà sữa &nbsp;&nbsp;<h2>
+            <p>Đánh giá: 5 sao</p>
+            <p>Bình luận: Nice :))</p>
+        </div>
+    </div>`;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
